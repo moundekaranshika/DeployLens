@@ -1,10 +1,6 @@
-# Zerops project configuration for DeployLens - AI Deployment Reliability Copilot
-project:
-  name: deploylens
-
-services:
-  - hostname: app
-    type: nodejs@20
+# Zerops deployment configuration
+zerops:
+  - setup: app
     build:
       base: nodejs@20
       buildCommands:
@@ -25,6 +21,3 @@ services:
         NODE_ENV: production
         PORT: 3000
         DEMO_MODE: "true"
-
-  - hostname: db
-    type: postgresql@16
